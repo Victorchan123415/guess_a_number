@@ -3,8 +3,10 @@ import random
 r = random.randint(1, 100)
 mini = 0
 maxi = 100
-
+count = 0
 while True:
+	count = count + 1
+	
 	num = input('please guess the number: ')
 	num = int(num)
 	if num == r:
@@ -16,6 +18,4 @@ while True:
 	elif num < r:
 		mini = num
 		print('the number is between', num, 'and', maxi)
-
-
-
+	print('this is your', count, 'guess')
