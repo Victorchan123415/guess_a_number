@@ -1,8 +1,12 @@
 import random
 
-r = random.randint(1, 100)
-mini = 0
-maxi = 100
+
+mini = input('please enter a lowerbound: ')
+maxi = input('please enter a upperbound: ')
+mini = int(mini)
+maxi = int(maxi)
+r = random.randint(mini, maxi)
+
 count = 0
 while True:
 	count = count + 1
@@ -11,11 +15,11 @@ while True:
 	num = int(num)
 	if num == r:
 		print('congratulation! you got it right!')
-		break
+		break 
 	elif num > r :
 		maxi = num
 		print('the number is between', mini, 'and', num)
 	elif num < r:
 		mini = num
 		print('the number is between', num, 'and', maxi)
-	print('this is your', count, 'guess')
+	print('this is your', count, 'guess')  
